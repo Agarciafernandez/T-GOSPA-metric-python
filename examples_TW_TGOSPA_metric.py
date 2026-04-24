@@ -23,13 +23,6 @@ rho=0.995;
 # T is the total number of time steps
 T = 800
 
-# Time weights for localisation, missed, false targets
-# These time weights are normalized to sum to one
-time_weights1 = (1 - rho) / (1 - rho**T) * rho**(T - np.arange(1, T + 1))
-
-# Time weights for switching
-time_weights2 = time_weights1[1:]
-
 
 
 # User can choose the ID of the estimate (from 1 to 4)
